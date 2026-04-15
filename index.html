@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Online Shop 🛒</h2>
+
+<a href="/cart">Go to Cart</a>
+
+<ul>
+    {% for p in products %}
+        <li>
+            {{ p[1] }} - ₹{{ p[2] }}
+            <a href="/add/{{ p[0] }}">Add to Cart</a>
+        </li>
+    {% endfor %}
+</ul>
+
+</body>
+</html>

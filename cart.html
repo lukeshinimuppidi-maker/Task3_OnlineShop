@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Your Cart 🛍️</h2>
+
+<ul>
+    {% for item in items %}
+        <li>
+            {{ item[1] }} - ₹{{ item[2] }}
+            <a href="/remove/{{ item[0] }}">Remove</a>
+        </li>
+    {% endfor %}
+</ul>
+
+<h3>Total: ₹{{ total }}</h3>
+
+<a href="/checkout">Checkout</a>
+<br><br>
+<a href="/">Back to Shop</a>
+
+</body>
+</html>
